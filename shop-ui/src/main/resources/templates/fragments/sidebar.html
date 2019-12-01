@@ -1,8 +1,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
-<div th:fragment="sidebar" id="sidebar" class="span3">
+<div th:fragment="sidebar" id="sidebar" class="col-md-3">
     <div class="well well-small">
-        <ul class="nav nav-list">
+        <ul class="nav list-group">
             <li><a th:href="@{/products}"><span class="icon-chevron-right"></span>Fashion</a></li>
             <li><a th:href="@{/products}"><span class="icon-chevron-right"></span>Watches</a></li>
             <li><a th:href="@{/products}"><span class="icon-chevron-right"></span>Fine Jewelry</a></li>
@@ -25,12 +25,16 @@
             only valid for online order. <br><br><a class="defaultBtn" href="#">Click here </a>
         </p>
     </div>
-    <div class="well well-small"><a href="#"><img th:src="@{/assets/img/paypal.jpg}" alt="payment method paypal"></a></div>
+    <div class="well well-sm">
+        <a href="#">
+            <img class="img-responsive" th:src="@{/assets/img/paypal.jpg}" alt="payment method paypal">
+        </a>
+    </div>
 
-    <a class="shopBtn btn-block" href="#">Upcoming products <br><small>Click to view</small></a>
-    <br>
-    <br>
-    <ul class="nav nav-list promowrapper">
+    <a class="shopBtn btn-block hidden-xs hidden-sm" href="#">Upcoming products <br><small>Click to view</small></a>
+    <br class="hidden-xs hidden-sm">
+    <br class="hidden-xs hidden-sm">
+    <ul class="nav list-group promowrapper hidden-xs hidden-sm">
         <li>
             <div class="thumbnail">
                 <a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span>

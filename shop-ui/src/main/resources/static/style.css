@@ -51,10 +51,10 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .carousel:hover .carousel-control.left{left: 8px;}
 .alignR{text-align:right;}
 .control-label.alignL, .alignL{text-align:left;}
-.loginFrm{ margin-bottom:8px;}
-.loginFrm .control-group{padding:8px 14px 0; margin-bottom:0 }
+.loginFrm{ margin-bottom:8px; padding: 1em; min-width: 280px;}
+.loginFrm .form-group{padding:8px 14px 0; margin-bottom:0 }
 .navbar .pull-right > li > .dropdown-menu, .navbar .nav > li > .dropdown-menu.pull-right {right: 0;left: auto;border-radius: 0; border-color: #ccc;}
-.navbar .nav , .marginLess{margin:0}
+.navbar-nav , .marginLess{margin:0}
 .navbar-search .search-query {padding: 4px 14px;-moz-border-radius: 1px;-webkit-border-radius: 1px;border-radius: 1px;line-height: 1.5em; min-width: 200px;}
 .navbar-search{margin-left:6px;}
 .actionList a{width:50%; font-size:11px; color:#444}
@@ -108,3 +108,4 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .gotop:hover {color: #fff;text-decoration: none;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
 #gototop{margin-top:1px;}
 #footerMenu a{ font-size:12px; text-transform:lowercase}
+.badge-warning {background-color: #f89406}

@@ -6,22 +6,22 @@
     <h4 class="title cntr"><span class="text">Manufactures</span></h4>
     <hr class="soften"/>
     <div class="row">
-        <div class="span2">
+        <div class="col-md-2">
             <a href="#"><img alt="" th:src="@{/assets/img/1.png}"></a>
         </div>
-        <div class="span2">
+        <div class="col-md-2">
             <a href="#"><img alt="" th:src="@{assets/img/2.png}"></a>
         </div>
-        <div class="span2">
+        <div class="col-md-2">
             <a href="#"><img alt="" th:src="@{assets/img/3.png}"></a>
         </div>
-        <div class="span2">
+        <div class="col-md-2">
             <a href="#"><img alt="" th:src="@{assets/img/4.png}"></a>
         </div>
-        <div class="span2">
+        <div class="col-md-2">
             <a href="#"><img alt="" th:src="@{assets/img/5.png}"></a>
         </div>
-        <div class="span2">
+        <div class="col-md-2">
             <a href="#"><img alt="" th:src="@{assets/img/6.png}"></a>
         </div>
     </div>
@@ -31,8 +31,8 @@
 Footer
 -->
 <footer th:fragment="footer" class="footer">
-    <div class="row-fluid">
-        <div class="span2">
+    <div class="row">
+        <div class="col-md-2">
             <h5>Your Account</h5>
             <a href="#">YOUR ACCOUNT</a><br>
             <a href="#">PERSONAL INFORMATION</a><br>
@@ -40,7 +40,7 @@ Footer
             <a href="#">DISCOUNT</a><br>
             <a href="#">ORDER HISTORY</a><br>
         </div>
-        <div class="span2">
+        <div class="col-md-2">
             <h5>Information</h5>
             <a th:href="@{/contact}">CONTACT</a><br>
             <a href="#">SITEMAP</a><br>
@@ -48,7 +48,7 @@ Footer
             <a href="#">TERMS AND CONDITIONS</a><br>
             <a href="#">ABOUT US</a><br>
         </div>
-        <div class="span2">
+        <div class="col-md-2">
             <h5>Our Offer</h5>
             <a href="#">NEW PRODUCTS</a> <br>
             <a href="#">TOP SELLERS</a><br>
@@ -56,7 +56,7 @@ Footer
             <a href="#">MANUFACTURERS</a><br>
             <a href="#">SUPPLIERS</a> <br/>
         </div>
-        <div class="span6">
+        <div class="col-md-6">
             <h5>The standard chunk of Lorem</h5>
             The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
             those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
@@ -82,8 +82,8 @@ Footer
 <th:block th:fragment="scripts">
     <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
     <!-- Placed at the end of the document so the pages load faster -->
-    <script th:src="@{/webjars/jquery/1.7.2/jquery.js}"></script>
-    <script th:src="@{/webjars/bootstrap/2.3.2/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/jquery/1.12.4/jquery.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.4.1/js/bootstrap.min.js}"></script>
     <script th:src="@{/webjars/jquery-easing/1.3/jquery.easing.js}"></script>
     <script th:src="@{/webjars/jquery.scrollTo/1.4.14/jquery.scrollTo.js}"></script>
     <script th:src="@{/assets/js/shop.js}"></script>

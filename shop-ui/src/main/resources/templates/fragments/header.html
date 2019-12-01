@@ -8,11 +8,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Bootstrap styles -->
-    <link th:href="@{/webjars/bootstrap/2.3.2/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.css}" rel="stylesheet"/>
     <!-- Customize styles -->
     <link th:href="@{/style.css}" rel="stylesheet"/>
     <!-- font awesome styles -->
-    <link th:href="@{webjars/font-awesome/3.2.1/css/font-awesome.css}" rel="stylesheet">
+    <link th:href="@{/webjars/font-awesome/3.2.1/css/font-awesome.css}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -24,7 +24,7 @@
 <!-- 
 	Upper Header Section 
 -->
-<div th:fragment="upper_header" class="navbar navbar-inverse navbar-fixed-top">
+<div th:fragment="upper_header" class="navbar navbar-fixed-top">
     <div class="topNav">
         <div class="container">
             <div class="alignR">
@@ -36,9 +36,9 @@
                 </div>
                 <a th:href="@{/index}"> <span class="icon-home"></span> Home</a>
                 <a href="#"><span class="icon-user"></span> My Account</a>
-                <a th:href="@{register}"><span class="icon-edit"></span> Free Register </a>
-                <a th:href="@{contact}"><span class="icon-envelope"></span> Contact us</a>
-                <a th:href="@{cart}"><span class="icon-shopping-cart"></span> 2 Item(s) - <span
+                <a th:href="@{/register}"><span class="icon-edit"></span> Free Register </a>
+                <a th:href="@{/contact}"><span class="icon-envelope"></span> Contact us</a>
+                <a th:href="@{/cart}"><span class="icon-shopping-cart"></span> 2 Item(s) - <span
                         class="badge badge-warning"> $448.42</span></a>
             </div>
         </div>
@@ -47,14 +47,14 @@
 
 <header th:fragment="lower_header" id="header">
     <div class="row">
-        <div class="span4">
+        <div class="col-md-4">
             <h1>
                 <a class="logo" th:href="@{/index}"><span>Twitter Bootstrap ecommerce template</span>
                     <img th:src="@{/assets/img/logo-bootstrap-shoping-cart.png}" alt="bootstrap sexy shop">
                 </a>
             </h1>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <div class="offerNoteWrapper">
                 <h1 class="dotmark">
                     <i class="icon-cut"></i>
@@ -62,12 +62,12 @@
                 </h1>
             </div>
         </div>
-        <div class="span4 alignR">
+        <div class="col-md-4 alignR">
             <p><br> <strong> Support (24/7) : 0800 1234 678 </strong><br><br></p>
-            <span class="btn btn-mini">[ 2 ] <span class="icon-shopping-cart"></span></span>
-            <span class="btn btn-warning btn-mini">$</span>
-            <span class="btn btn-mini">&pound;</span>
-            <span class="btn btn-mini">&euro;</span>
+            <span class="btn btn-xs">[ 2 ] <span class="icon-shopping-cart"></span></span>
+            <span class="btn btn-warning btn-xs">$</span>
+            <span class="btn btn-xs">&pound;</span>
+            <span class="btn btn-xs">&euro;</span>
         </div>
     </div>
 </header>
@@ -75,16 +75,10 @@
 <!--
 Navigation Bar Section
 -->
-<div th:fragment="navbar" class="navbar">
-    <div class="navbar-inner">
+<nav th:fragment="navbar" class="navbar navbar-default">
         <div class="container">
-            <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <div class="nav-collapse">
-                <ul class="nav">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav">
                     <li class="active"><a th:href="@{/index}">Home </a></li>
                     <li class=""><a href="list-view.html">List View</a></li>
                     <li class=""><a href="grid-view.html">Grid View</a></li>
@@ -92,25 +86,31 @@ Navigation Bar Section
                     <li class=""><a href="four-col.html">Four Column</a></li>
                     <li class=""><a href="general.html">General Content</a></li>
                 </ul>
-                <form action="#" class="navbar-search pull-left">
-                    <input type="text" placeholder="Search" class="search-query span2">
+                <form action="#" class="navbar-form pull-left">
+                    <input type="text" placeholder="Search" class="search-query form-control">
                 </form>
-                <ul class="nav pull-right">
+                <ul class="nav navbar-nav pull-right">
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span>
-                            Login <b class="caret"></b></a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"
+                           role="button" aria-haspopup="true" aria-expanded="false">
+
+                            <span class="icon-lock"></span>
+                            Login <b class="caret"></b>
+                        </a>
                         <div class="dropdown-menu">
                             <form class="form-horizontal loginFrm">
-                                <div class="control-group">
-                                    <input type="text" class="span2" id="inputEmail" placeholder="Email">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
                                 </div>
-                                <div class="control-group">
-                                    <input type="password" class="span2" id="inputPassword" placeholder="Password">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                                 </div>
-                                <div class="control-group">
-                                    <label class="checkbox">
-                                        <input type="checkbox"> Remember me
+                                <div class="form-group checkbox">
+                                    <label>
+                                        <input type="checkbox">  Remember me
                                     </label>
+                                </div>
+                                <div class="form-group">
                                     <button type="submit" class="shopBtn btn-block">Sign in</button>
                                 </div>
                             </form>
@@ -119,7 +119,6 @@ Navigation Bar Section
                 </ul>
             </div>
         </div>
-    </div>
-</div>
+</nav>
 
 </html>

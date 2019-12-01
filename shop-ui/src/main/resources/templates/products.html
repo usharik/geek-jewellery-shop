@@ -29,18 +29,18 @@ Lower Header Section
     Body Section
     -->
     <div class="row">
-        <div th:replace="fragments/sidebar ::sidebar" id="sidebar" class="span3">
+        <div th:replace="fragments/sidebar ::sidebar" id="sidebar" class="col-md-3">
         </div>
 
-        <div class="span9">
+        <div class="col-md-9">
             <!--
             New Products
             -->
             <div class="well well-small">
                 <h3>Our Products </h3>
-                <div th:each="prodGroup : ${products}" class="row-fluid">
-                    <ul class="thumbnails">
-                        <li th:each="prod : ${prodGroup}" class="span4">
+                <div th:each="prodGroup : ${products}" class="row">
+                    <ul class="list-unstyled thumbnails">
+                        <li th:each="prod : ${prodGroup}" class="col-md-4">
                             <div class="thumbnail">
                                 <a href="product_details.html" class="overlay"></a>
                                 <a class="zoomTool" th:href="@{/product_details/{id}(id=${prod.id})}" title="add to cart"><span
