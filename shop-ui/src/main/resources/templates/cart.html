@@ -34,7 +34,7 @@ Lower Header Section
                 <li><a th:href="@{/index}">Home</a> <span class="divider"></span></li>
                 <li class="active">Check Out</li>
             </ul>
-            <div class="well well-small">
+            <div class="well well-sm">
                 <h1>Check Out <small class="pull-right"> 2 Items are in the cart </small></h1>
                 <hr class="soften"/>
 
@@ -60,7 +60,7 @@ Lower Header Section
                         </td>
                         <td> -</td>
                         <td><span class="shopBtn"><span class="icon-ok"></span></span></td>
-                        <td th:text="${lineItem.productRepr.price}">$50.00</td>
+                        <td>$<span th:text="${lineItem.productRepr.price}" th:remove="tag">$50.00</span></td>
                         <td>
                             <input class="col-md-2" style="max-width:34px" placeholder="1" id="appendedInputButtons"
                                    size="16" type="text" th:value="${lineItem.qty}">

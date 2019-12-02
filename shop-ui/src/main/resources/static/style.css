@@ -72,6 +72,7 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .cart{border:1px solid #ddd;  }
 #sidebar ul {margin: 0;padding: 0;}
 #sidebar .alert {padding: 8px;}
+#sidebar .nav > li > a {padding: 4px 5px}
 #sidebar .nav a{color:#000}
 #sidebar .nav a:hover{color:#f89406}
 #sidebar .cart{border:1px solid #B94A48; }
@@ -80,7 +81,7 @@ hr.soften {margin: 8px 0;background: #DDD;}
 #sidebar a.defaultBtn:hover, .defaultBtn:hover{color:#fff; text-decoration:none; background:#333}
 #sidebar .nav a.zoomTool{color:#fff} 
 .thumbnail>a{display:block; text-align:center}
-.carousel-caption {background: transparent;background: transparent;}
+.carousel-caption {background: transparent;}
 #compairTbl td{text-align:center;}
 .justify{text-align:justify;}
 .table td[align=right] {text-align: right;}
