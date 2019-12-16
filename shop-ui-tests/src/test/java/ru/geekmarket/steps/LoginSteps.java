@@ -41,13 +41,19 @@ public class LoginSteps {
 
     @Then("^name should be \"([^\"]*)\"$")
     public void nameShouldBe(String name) throws Throwable {
-        WebElement webElement = webDriver.findElement(By.id("logged-in-username"));
+        WebElement webElement = webDriver.findElement(By.id("dd_user"));
         assertThat(webElement.getText()).isEqualTo(name);
     }
 
     @Given("^any user logged in$")
     public void userLoggedIn() {
         webDriver.findElement(By.id("logged-in-username"));
+    }
+
+    @When("^Open dropdown menu$")
+    public void openDropDownMenu() {
+        WebElement webElement = webDriver.findElement(By.id("dd_user"));
+        webElement.click();
     }
 
     @When("^click logout button$")
@@ -58,7 +64,8 @@ public class LoginSteps {
 
     @Then("^user logged out$")
     public void userLoggedOut() {
-        webDriver.findElement(By.id("link-login"));
+        webDriver.findElement(By.id("inp-username"));
+        webDriver.findElement(By.id("inp-password"));
     }
 
     @After

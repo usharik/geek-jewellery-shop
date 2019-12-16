@@ -6,7 +6,8 @@ Feature: Login
     And I provide username as "<username>" and password as "<password>"
     And I click on login button
     Then name should be "<name>"
-    When click logout button
+    When Open dropdown menu
+    And click logout button
     Then user logged out
 
     Examples:
